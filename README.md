@@ -1,2 +1,2 @@
 # gulp-project-template
-project init template for gulp
+Gulp项目初始化模板。正在完善中。
