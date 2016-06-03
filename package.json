@@ -22,6 +22,7 @@
     "gulp-util": "^3.0.7",
     "http-server": "^0.9.0",
     "jquery": "^2.2.4",
+    "jshint": "^2.9.2",
     "run-sequence": "^1.2.1"
   },
   "keywords": [
