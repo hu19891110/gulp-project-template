@@ -1,4 +1,4 @@
-基于Amazeui的后台管理页面。
+使用Gulp开发基于Amazeui的项目。
 
 # 构建工具
 - gulp

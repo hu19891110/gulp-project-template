@@ -1,20 +1,9 @@
 {
-  "name": "admin-page",
+  "name": "gulp project template",
   "version": "1.0.0",
-  "description": "admin manager pages",
+  "description": "gulp project template",
   "main": "gulpfile.js",
   "homepage": "http://www.dmax.hk",
-  "repository": {
-    "type": "git",
-    "url": "https://git.coding.net/trendsoft/admin-page-dev.git"
-  },
-  "keywords": [
-    "admin",
-    "manager",
-    "pages",
-    "html5",
-    "tshop"
-  ],
   "author": "hadi <251075218@qq.com>",
   "license": "Apache License 2.0",
   "devDependencies": {
