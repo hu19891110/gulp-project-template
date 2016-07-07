@@ -96,3 +96,27 @@ dir	`项目目录`
 |-- data	`数据文件目录`
 | dist	`生成的页面目录`
 ```
+
+
+# browserify配置
+```
+//js 使用browserify对js进行编译、打包、压缩、maps
+gulp.task('build:js',function () {
+	gulp.src(config.path.mainjs).pipe(sourcemaps.init()).pipe(browserify()).pipe($.header(banner,{pkg:pkg,ver:''})).pipe(jshint()).pipe(gulp.dest(config.dist.js)).pipe(uglify()).pipe($.rename({
+		'suffix': '.min',
+		'extname': '.js'
+	})).pipe(sourcemaps.write('./')).pipe(gulp.dest(config.dist.js));
+});
+```
+## 修改package.json
+配置browserify-shim，进browserify打包时不加入Jquery，这样就可以通过外部引用使用Jquery
+```
+"browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  }
+```
