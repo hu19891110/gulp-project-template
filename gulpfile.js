@@ -21,7 +21,8 @@ var config = {
 		mainjs: './src/js/main.js',
 		js:'./src/js/*.js',
 		images: './src/images/**/*',
-		less: './src/less/main.less',
+		mainless:'./src/less/main.less',
+		less: './src/less/*.less',
 		fonts: './src/fonts/**/*',
 		data: './src/data/**/*'
 	},
@@ -81,7 +82,7 @@ gulp.task('copy:data',function () {
 });
 //less
 gulp.task('build:less',function () {
-	gulp.src(config.path.less).pipe(sourcemaps.init()).pipe($.header(banner,{pkg:pkg,ver:''})).pipe($.plumber({errorHandler:function (err) {
+	gulp.src(config.path.mainless).pipe(sourcemaps.init()).pipe($.header(banner,{pkg:pkg,ver:''})).pipe($.plumber({errorHandler:function (err) {
 		console.log(err);
 		this.emit('end');
 	}})).pipe($.less()).pipe($.autoprefixer({browsers:config.AUTOPREFIXER_BROWSERS})).pipe(gulp.dest(config.dist.css)).pipe(minify()).pipe($.rename({
