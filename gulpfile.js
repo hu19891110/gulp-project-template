@@ -99,7 +99,10 @@ gulp.task('build:less',function () {
 });
 //js
 gulp.task('build:js',function () {
-	gulp.src(config.path.mainjs).pipe(sourcemaps.init()).pipe(browserify()).pipe($.header(banner,{pkg:pkg,ver:''})).pipe(jshint()).pipe(gulp.dest(config.dist.js)).pipe(uglify()).pipe($.rename({
+	gulp.src(config.path.mainjs).pipe(sourcemaps.init()).pipe(browserify()).pipe($.header(banner,{pkg:pkg,ver:''})).pipe($.plumber({errorHandler:function(err){
+		console.log(err);
+		this.emit('end');
+	}})).pipe(jshint()).pipe(gulp.dest(config.dist.js)).pipe(uglify()).pipe($.rename({
 		'suffix': '.min',
 		'extname': '.js'
 	})).pipe(sourcemaps.write('./')).pipe(gulp.dest(config.dist.js));
