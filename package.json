@@ -39,6 +39,7 @@
     ]
   },
   "browserify-shim": {
-    "jquery": "global:jQuery"
+    "jquery": "global:jQuery",
+    "amazeui":"global:amazeui"
   }
 }

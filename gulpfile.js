@@ -62,7 +62,8 @@ gulp.task('copy:jquery',function () {
 });
 //amazeui
 gulp.task('copy:amazeui',function () {
-	gulp.src('./node_modules/amazeui/dist/**/*').pipe(gulp.dest(config.dist.lib+'/amazeui'));
+	gulp.src('./node_modules/amazeui/dist/js/**/*').pipe(gulp.dest(config.dist.lib+'/amazeui'));
+	gulp.src('./node_modules/amazeui/dist/fonts/**/*').pipe(gulp.dest(config.dist.fonts));
 });
 //handlebars
 gulp.task('copy:handlebars',function () {

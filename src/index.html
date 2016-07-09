@@ -1,43 +1,92 @@
-<!doctype html>
-<html class="no-js">
+<!DOCTYPE html>
+<html lang="zh-cn">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <title>Hello Amaze UI</title>
-    <!-- Set render engine for 360 browser -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no">
     <meta name="renderer" content="webkit">
-    <!-- No Baidu Siteapp-->
-    <meta http-equiv="Cache-Control" content="no-siteapp"/>
-    <link rel="icon" type="image/png" href="/images/favicon.png">
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="/images/app-icon72x72@2x.png">
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
-    <link rel="apple-touch-icon-precomposed" href="/images/app-icon72x72@2x.png">
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="/images/app-icon72x72@2x.png">
-    <meta name="msapplication-TileColor" content="#0e90d2">
-    <link rel="stylesheet" href="/lib/amazeui/css/amazeui.min.css">
-    <link rel="stylesheet" href="/css/main.min.css">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="alternate icon" type="image/png" href="images/favicon.png">
+    <link rel='icon' href='favicon.ico' type='image/x-ico' />
+    <title>开源的B2C电商系统TSHOP</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="css/main.min.css" />
     <!--[if (gte IE 9)|!(IE)]><!-->
-    <script src="/lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
     <!--<![endif]-->
     <!--[if lte IE 8 ]>
     <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-    <script src="/lib/amazeui/js/amazeui.ie8polyfill.min.js"></script>
+    <script src="lib/amazeui/amazeui.ie8polyfill.min.js"></script>
     <![endif]-->
-    <script src="/lib/amazeui/js/amazeui.min.js"></script>
-    <script src="/js/main.min.js"></script>
+    <script type="text/javascript" src="lib/amazeui/amazeui.min.js"></script>
+    <script type="text/javascript" src="js/main.min.js"></script>
 </head>
 <body>
-<p>
-    Hello Amaze UI.
-</p>
+<div class="topbar">
+    <div class="am-container">
+        <div class="am-fl" style="line-height:30px;">
+            您好！欢迎您来到TSHOP&nbsp;&nbsp;<a href="" title="登录">[&nbsp;请登录&nbsp;]</a>&nbsp;&nbsp;<a href="" title="注册">[&nbsp;免费注册&nbsp;]</a>
+        </div>
+        <div class="am-fr" style="line-height:30px;">
+            <a href="#">购物车</a>&nbsp;&nbsp;
+            <a href="#">我的订单</a>&nbsp;&nbsp;
+            <a href="#">我的TSHOP</a>&nbsp;&nbsp;
+            <a href="#">手机客户端</a>&nbsp;&nbsp;
+            <a href="#">微店</a>&nbsp;&nbsp;
+            <a href="#">客户服务</a>&nbsp;&nbsp;
+            <a href="#">在线帮助</a>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="am-container">
+
+    </div>
+</div>
+<div class="am-container am-margin-top-lg">
+    <div class="am-g">
+        <div class="am-u-sm-4">
+            <a href="index.html"><img src="images/tlogo.png" title="tshop" alt="tshop" height="60px" /></a>
+        </div>
+        <div class="am-u-sm-5">
+            <form action="#" method="get" class="am-form">
+                <div class="am-input-group">
+                    <input type="search" class="am-form-field" value="" placeholder="平板电视" />
+							<span class="am-input-group-btn">
+								<button class="am-btn am-btn-default" type="button"><i class="am-icon-search"></i>&nbsp;&nbsp;搜索&nbsp;&nbsp;</button>
+						    </span>
+                </div>
+                <small class="text-inverse am-margin-xs">
+                    <a href="" title="易优市场">易优市场</a>&nbsp;&nbsp;
+                    <a href="" title="微信">微信</a>&nbsp;&nbsp;
+                    <a href="" title="QQ">QQ</a>&nbsp;&nbsp;
+                    <a href="" title="360">360</a>&nbsp;&nbsp;
+                    <a href="" title="淘宝">淘宝</a>&nbsp;&nbsp;
+                    <a href="" title="京东">京东</a>&nbsp;&nbsp;
+                    <a href="" title="hao123">hao123</a>&nbsp;&nbsp;
+                    <a href="" title="乐视">乐视</a>&nbsp;&nbsp;
+                </small>
+            </form>
+        </div>
+        <div class="am-u-sm-3">
+            <a href="#" class="am-btn am-btn-primary"><i class="am-icon-shopping-cart"></i>&nbsp;&nbsp;我的购物车&nbsp;<span class="am-badge am-badge-warning am-round">2</span></a>
+        </div>
+    </div>
+</div>
+<div class="am-margin-top-lg tnav">
+    <div class="am-container">
+        <ul class="am-nav am-nav-pills">
+            <li class="nav-product-all"><a href="#"><i class="am-icon-bars"></i>&nbsp;&nbsp;全部产品分类</a></li>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">服装城</a></li>
+            <li><a href="#">美妆馆</a></li>
+            <li><a href="#">母婴店</a></li>
+            <li><a href="#">团购</a></li>
+            <li><a href="#">拍卖</a></li>
+        </ul>
+    </div>
+</div>
 </body>
 </html>
