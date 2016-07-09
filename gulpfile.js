@@ -23,6 +23,7 @@ var config = {
 		images: './src/images/**/*',
 		mainless:'./src/less/main.less',
 		less: './src/less/*.less',
+		json:'./src/json/**/*',
 		fonts: './src/fonts/**/*',
 		data: './src/data/**/*'
 	},
@@ -31,6 +32,7 @@ var config = {
 		js: './dist/js',
 		lib:'./dist/lib',
 		css: './dist/css',
+		json:'./dist/json',
 		fonts: './dist/fonts',
 		images: './dist/images',
 		data: './dist/data'
@@ -77,6 +79,10 @@ gulp.task('copy:fonts',function () {
 gulp.task('build:images',function () {
 	gulp.src(config.path.images).pipe(imagemin()).pipe(gulp.dest(config.dist.images));
 });
+//json
+gulp.task('copy:json',function () {
+	gulp.src(config.path.json).pipe(gulp.dest(config.dist.json));
+});
 //data
 gulp.task('copy:data',function () {
 	gulp.src(config.path.data).pipe(gulp.dest(config.dist.data));
@@ -108,7 +114,7 @@ gulp.task('copy:lib',function (cb) {
 	runSequence(['copy:jquery','copy:amazeui','copy:handlebars'],cb);
 });
 gulp.task('copy:src',function (cb) {
-	runSequence(['copy:fonts','build:images','copy:data'],cb);
+	runSequence(['copy:fonts','build:images','copy:data','copy:json'],cb);
 });
 gulp.task('build:src',function (cb) {
 	runSequence(['build:less','build:js','build:html'],cb);
