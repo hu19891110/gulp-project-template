@@ -1,7 +1,7 @@
 使用Gulp开发基于Amazeui的项目。
 
 # 构建工具
-- gulp
+- gulp 
 
 - gulp-browserify 浏览器端CommonJS规范
 
