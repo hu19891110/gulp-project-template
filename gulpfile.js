@@ -20,6 +20,7 @@ var config = {
 		layout:'./src/layout/*.html',
 		mainjs: './src/js/main.js',
 		js:'./src/js/*.js',
+		jslib:'./src/jslib/*.js',
 		images: './src/images/**/*',
 		mainless:'./src/less/main.less',
 		less: './src/less/*.less',
@@ -83,6 +84,10 @@ gulp.task('build:images',function () {
 gulp.task('copy:json',function () {
 	gulp.src(config.path.json).pipe(gulp.dest(config.dist.json));
 });
+//jslib
+gulp.task('copy:jslib',function () {
+	gulp.src(config.path.jslib).pipe(gulp.dest(config.dist.js));
+});
 //data
 gulp.task('copy:data',function () {
 	gulp.src(config.path.data).pipe(gulp.dest(config.dist.data));
@@ -114,7 +119,7 @@ gulp.task('build:html',function () {
 	})).pipe(gulp.dest(config.dist.root));
 });
 gulp.task('copy:lib',function (cb) {
-	runSequence(['copy:jquery','copy:amazeui','copy:handlebars'],cb);
+	runSequence(['copy:jquery','copy:amazeui','copy:handlebars','copy:jslib'],cb);
 });
 gulp.task('copy:src',function (cb) {
 	runSequence(['copy:fonts','build:images','copy:data','copy:json'],cb);
